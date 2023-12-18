@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" ?>
+<Page
+    x:Class="Замены_в_расписании.Windows.Создание_замены"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Замены_в_расписании.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctWinUI="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <TextBlock Margin="0,25,0,0" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="TimesNewRoman" FontSize="36" Text="Создание замены"/>
+        <TextBlock Margin="0,90,0,0" HorizontalAlignment="Left" FontSize="18" Text="Выбрать группу:"/>
+        <ComboBox Width="200" FontSize="14" VerticalAlignment="Top" Margin="140,90,0,0" HorizontalAlignment="Left" Name="groups"/>
+        <TextBlock Margin="350,90,0,0" HorizontalAlignment="Left" FontSize="18" Text="Выбрать дату:"/>
+        <CalendarDatePicker Width="200" FontSize="14" VerticalAlignment="Top" Margin="470,90,0,0" HorizontalAlignment="Left" Name="datee"/>
+        <TextBlock Margin="0,150,0,0" HorizontalAlignment="Left" FontSize="18" Text="Номер пары:"/>
+        <ComboBox IsEditable="True" Width="200" FontSize="14" VerticalAlignment="Top" Margin="140,150,0,0" HorizontalAlignment="Left" Name="Npars">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+        </ComboBox>
+        <TextBlock Margin="350,150,0,0" HorizontalAlignment="Left" FontSize="18" Text="Номер кабинета:"/>
+        <TextBox Width="200" FontSize="14" VerticalAlignment="Top" Margin="500,150,0,0" HorizontalAlignment="Left" Name="Nkabinet"/>
+        <TextBlock Margin="0,210,0,0" HorizontalAlignment="Left" FontSize="18" Text="Предмет:"/>
+        <ComboBox Width="200" FontSize="14" VerticalAlignment="Top" Margin="80,210,0,0" HorizontalAlignment="Left" Name="Predmet"/>
+        <TextBlock Margin="290,210,0,0" HorizontalAlignment="Left" FontSize="18" Text="Заменяемый предмет:"/>
+        <ComboBox Width="200" FontSize="14" VerticalAlignment="Top" Margin="480,210,0,0" HorizontalAlignment="Left" Name="Zpredmet"/>
+        <Button Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="690,210,0,0" Content="Создать замену" />
+        <Button Click="Button_Click_1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,930,0,0" Content="Печать" />
+        <Button Click="Button_Click_2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300,930,0,0" Content="Просмотр замен" />
+        <ctWinUI:DataGrid Margin="0,250,0,100" Background="LightCyan" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="table" AutoGenerateColumns="False">
+            <ctWinUI:DataGrid.Columns>
+                <ctWinUI:DataGridTextColumn Binding="{Binding Path= Группа}" Header="Группа"/>
+                <ctWinUI:DataGridTextColumn Binding="{Binding Path= Пара}" Header="Пара"/>
+                <ctWinUI:DataGridTextColumn Binding="{Binding Path= Кабинет}" Header="Кабинет"/>
+                <ctWinUI:DataGridTextColumn Binding="{Binding Path= Урок}" Header="Урок"/>
+                <ctWinUI:DataGridTextColumn Binding="{Binding Path= За}" Header="За"/>
+            </ctWinUI:DataGrid.Columns>
+        </ctWinUI:DataGrid>
+    </Grid>
+</Page>

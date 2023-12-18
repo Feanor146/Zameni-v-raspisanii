@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" ?>
+<Window
+    x:Class="Замены_в_расписании.Windows.Замены_в_расписании"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Замены_в_расписании.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Title="Замены в расписании">
+    <NavigationView ItemInvoked="Menu_ItemInvoked"  Name="Menu" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="LeftCompact" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightCyan">
+            <NavigationView.MenuItems>
+            <NavigationViewItem Name="changingschedule" FontSize="24" HorizontalAlignment="Stretch" Height="50" Content="Создание замены">
+                <NavigationViewItem.Icon>
+                    <ImageIcon Source="/Icons/changingschedule.png" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Name="groups" FontSize="24" HorizontalAlignment="Stretch" Height="50" Content="Группы">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="/Icons/groups.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            <NavigationViewItem Name="specializations" FontSize="24" HorizontalAlignment="Stretch" Height="50" Content="Специальности и профессии">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="/Icons/specializations.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            <NavigationViewItem Name="disciplines" FontSize="24" HorizontalAlignment="Stretch" Height="50" Content="Дисциплины">
+                    <NavigationViewItem.Icon>
+                        <ImageIcon Source="/Icons/disciplines.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame Name="FrameNavigation" Background="LightGray"/>
+        </NavigationView>    
+</Window>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" ?>
+<Page
+    x:Class="Замены_в_расписании.Windows.Дисциплины"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Замены_в_расписании.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctWinUI="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <TextBlock Margin="0,25,0,0" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="TimesNewRoman" FontSize="36" Text="Дисциплины"/>
+        <TextBlock Margin="0,90,0,0" HorizontalAlignment="Left" FontSize="18" Text="Добавить дисциплину:"/>
+        <TextBlock Margin="200,90,0,0" HorizontalAlignment="Left" FontSize="18" Text="Специальност/профессия:"/>
+        <TextBlock Margin="640,90,0,0" HorizontalAlignment="Left" FontSize="18" Text="Название дисциплины:"/>
+        <TextBox Width="100" FontSize="14" VerticalAlignment="Top" Margin="840,90,0,0" HorizontalAlignment="Left" Name="New"/>
+        <ComboBox Width="200" FontSize="14" VerticalAlignment="Top" Margin="430,90,0,0" HorizontalAlignment="Left" Name="specprof"/>
+        <Button Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="950,90,0,0" Content="Добавить" />
+        <Button Click="Button_Click_1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,930,0,0" Content="Сохранить изменения" />
+        <ctWinUI:DataGrid Margin="0,150,0,100" Background="LightCyan" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="table" AutoGenerateColumns="False">
+            <ctWinUI:DataGrid.Columns>
+                <ctWinUI:DataGridTextColumn IsReadOnly="True" Header="ID" Binding="{Binding ID}"/>
+                <ctWinUI:DataGridTextColumn  Header="Название дисциплины" Binding="{Binding Название_дисциплины}"/>
+            </ctWinUI:DataGrid.Columns>
+        </ctWinUI:DataGrid>
+    </Grid>
+</Page>

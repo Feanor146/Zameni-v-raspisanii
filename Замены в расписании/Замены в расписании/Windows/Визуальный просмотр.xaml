@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<Page
+    x:Class="Замены_в_расписании.Windows.Визуальный_просмотр"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Замены_в_расписании.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:ctWinUI="using:Microsoft.Web.WebView2.Core"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <WebView2 x:Name="webview" Source="C:\Изменения в расписании\Все замены.pdf"/>
+    </Grid>
+</Page>
